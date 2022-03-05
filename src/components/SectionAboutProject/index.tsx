@@ -20,7 +20,6 @@ const SectionAboutProject = ({
           alt={image.alternativeText}
           loading="lazy"
         />
-
         <div>
           <Heading>{title}</Heading>
           <S.Text>{description}</S.Text>
