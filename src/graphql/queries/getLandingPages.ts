@@ -2,68 +2,78 @@ const GET_LANDING_PAGE = /* GraphQL */ `
   # Write your ququeryery or mutation here
   # Write your ququeryery or mutation here
 
-fragment logo on LandingPage {
-  logo {
-    alternativeText
-    url
-  }
-}
+  # Write your ququeryery or mutation here
 
-fragment sectionAboutProject on LandingPage {
-  sectionAboutProject {
-    title
-    description
-    image {
+  fragment logo on LandingPage {
+    logo {
       alternativeText
       url
     }
   }
-}
 
-fragment sectionTech on LandingPage {
-  sectionTech {
-    title
-    techIcons {
-      icon {
-        name
+  fragment sectionAboutProject on LandingPage {
+    sectionAboutProject {
+      title
+      description
+      image {
+        alternativeText
         url
       }
     }
   }
-}
-fragment sectionConcepts on LandingPage{
-  sectionConcepts{
-    title
-    concepts{
+
+  fragment sectionTech on LandingPage {
+    sectionTech {
       title
+      techIcons {
+        icon {
+          name
+          url
+        }
+      }
     }
   }
-}
-
-fragment header on LandingPage {
-  header {
-    title
-    description
-    button {
-      label
-      url
+  fragment sectionConcepts on LandingPage {
+    sectionConcepts {
+      title
+      concepts {
+        title
+      }
     }
-    image {
-      alternativeText
-      url
+  }
+  fragment sectionModules on LandingPage {
+    sectionModules {
+      modules {
+        title
+        subtitle
+        description
+      }
     }
   }
 
-}
-query LANDING_PAGE {
-  landingPage {
-    ...logo
-    ...header
-    ...sectionAboutProject
-    ...sectionTech
-    ...sectionConcepts
+  fragment header on LandingPage {
+    header {
+      title
+      description
+      button {
+        label
+        url
+      }
+      image {
+        alternativeText
+        url
+      }
+    }
   }
-}
-
+  query LANDING_PAGE {
+    landingPage {
+      ...logo
+      ...header
+      ...sectionAboutProject
+      ...sectionTech
+      ...sectionConcepts
+      ...sectionModules
+    }
+  }
 `
 export default GET_LANDING_PAGE

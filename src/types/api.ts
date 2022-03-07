@@ -37,6 +37,17 @@ export type SectionAbouProjectProps = {
   }
 }
 
+export type Modules = {
+  title: string
+  subtitle: string
+  description: string
+}
+
+export type SectionModulesProps = {
+  title:string
+  modules: Modules[]
+}
+
 export type SectionConceptsProps = {
   title: string
   concepts: Array<{
@@ -50,4 +61,5 @@ export type LandingPageProps = {
   sectionAboutProject: SectionAbouProjectProps
   sectionTech: SectionTechProps
   sectionConcepts: SectionConceptsProps
+  sectionModules: SectionModulesProps
 }
