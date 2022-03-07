@@ -72,16 +72,44 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
-  fragment sectionFaq on LandingPage{
-   sectionFaq{
+  fragment sectionFaq on LandingPage {
+    sectionFaq {
       title
-      questions{
+      questions {
         question
         answer
         id
       }
     }
-}
+  }
+
+  fragment pricingBox on LandingPage {
+    pricingBox {
+      totalPrice
+      numberInstallments
+      benefits
+      priceInstallment
+      button {
+        label
+        url
+      }
+    }
+  }
+  fragment sectionAboutUs on LandingPage {
+    sectionAboutUs {
+      title
+      authors {
+        photo {
+          url
+          alternativeText
+        }
+        name
+        role
+        description
+      }
+    }
+  }
+
   query LANDING_PAGE {
     landingPage {
       ...logo
@@ -92,6 +120,8 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...sectionModules
       ...sectionAgenda
       ...sectionFaq
+      ...pricingBox
+      ...sectionAboutUs
     }
   }
 `

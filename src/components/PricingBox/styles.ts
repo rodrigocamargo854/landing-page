@@ -63,12 +63,8 @@ export const BenefitsList = styled.ul`
   ${({ theme }) => css`
     list-style: none;
     margin-bottom: ${theme.spacings.large};
-  `}
-`
-
-export const BenefitsItem = styled.li`
-  ${({ theme }) => css`
-    color: ${theme.colors.black};
+    li{
+      color: ${theme.colors.black};
     font-size: ${theme.font.sizes.small};
     position: relative;
     padding-left: ${theme.spacings.small};
@@ -87,9 +83,9 @@ export const BenefitsItem = styled.li`
     &:not(:last-child) {
       margin-bottom: ${theme.spacings.xsmall};
     }
+    }
   `}
 `
-
 export const ButtonFullPrice = styled.span`
   ${({ theme }) => css`
     text-decoration: line-through;

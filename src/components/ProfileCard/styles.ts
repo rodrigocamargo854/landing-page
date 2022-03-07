@@ -9,7 +9,7 @@ export const Card = styled.article`
   `}
 `
 
-export const Image = styled.picture`
+export const Image = styled.img`
   ${({ theme }) => css`
     img {
       width: 12.5rem;
