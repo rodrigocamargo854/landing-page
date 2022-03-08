@@ -74,6 +74,19 @@ export type PricingBoxProps = {
   }
 }
 
+export type Reviews={
+    name : string
+    text : string
+    photo:{
+      url:string
+    }
+}
+
+export type SectionReviewsProps = {
+  title:string
+  reviews:Reviews[]
+}
+
 export type Image = {
   url: string
   alternativeText: string
@@ -101,4 +114,5 @@ export type LandingPageProps = {
   sectionFaq: SectionFaqProps
   pricingBox: PricingBoxProps
   sectionAboutUs: SectionAboutUsProps
+  sectionReviews: SectionReviewsProps
 }
