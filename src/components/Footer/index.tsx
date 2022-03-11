@@ -5,6 +5,7 @@ import Container from 'components/Container'
 import * as S from './styles'
 
 const Footer = () => (
+  //todo transoforming this footer in dinamic footer
   <S.Wrapper>
     <Container>
       <p>
