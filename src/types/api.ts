@@ -54,6 +54,7 @@ export type SectionConceptsProps = {
 
 export type SectionAgendaProps = Image
 export type Questions = {
+
   question: string
   answer: string
   id: string
@@ -88,6 +89,8 @@ export type SectionReviewsProps = {
 }
 
 export type Image = {
+  description:string
+  title:string
   url: string
   alternativeText: string
 }

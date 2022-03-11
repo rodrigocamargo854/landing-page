@@ -20,6 +20,11 @@
   ],
   "rules": {
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+    "prettier/prettier": ["error", {
+      "endOfLine":"auto"
+    }],
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
